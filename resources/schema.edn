@@ -1,0 +1,41 @@
+                                        ; USER
+[{:db/ident :user/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Name of the user"
+  :db/index true}
+ {:db/ident :user/email
+  :db/valueType :db.type/string
+  :db/unique :db.unique/identity
+  :db/cardinality :db.cardinality/one
+  :db/doc "The email of the user"}
+ {:db/ident :user/oauthId
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "What kind of login he has"}
+ {:db/ident :user/posts
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/doc "All user posts"}
+ {:db/ident :user/followers
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/doc "User's followers"}
+
+                                        ; POST
+ {:db/ident :post/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Post title"}
+ {:db/ident :post/publishedAt
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Posts published date"}
+ {:db/ident :post/content
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Post's content"}
+ {:db/ident :post/publisher
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "Posts publisher"}]

@@ -1,0 +1,12 @@
+[{:db/id "vinny"
+  :user/name "Vinny"
+  :user/email "vinny@email.com"
+  :user/oauthId "Github"
+  :user/posts [{:db/id "post1"
+                :post/title "Title1"
+                :post/content "My Content"
+                :post/publisher "vinny"}
+               {:db/id "post2"
+                :post/title "Title2"
+                :post/content "My Content2"
+                :post/publisher "vinny"}]}]
